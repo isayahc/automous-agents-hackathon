@@ -1,0 +1,2 @@
+- Unless i say explicitly, any software should be written in python. With regards to python always add typing.
+- When writing code write the entire file expected. I should be able to copy and paste your output and have it work.  Unless i say otherwise.
