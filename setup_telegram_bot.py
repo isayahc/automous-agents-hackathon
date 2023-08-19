@@ -22,6 +22,8 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Send back the same text that was sent by the user
     await context.bot.send_message(chat_id=update.effective_chat.id, text=update.message.text)
 
+    # Send an audio file :)
+    await context.bot.send_audio(chat_id=update.effective_chat.id, audio="./audio/saul.mp3")
 
 if __name__ == '__main__':
     load_dotenv()
