@@ -2,10 +2,9 @@ import os
 import wave
 from elevenlabs import generate, play, set_api_key, voices
 import dotenv
+import config
 
-dotenv.load_dotenv()
-ELEVENLABS_API_KEY = os.environ["ELEVENLABS_API_KEY"]
-set_api_key(ELEVENLABS_API_KEY)
+
 voices() # must be called in order to activate custom trained voices
 
 
@@ -19,9 +18,8 @@ def save_as_wav(audio, filename):
         wav_file.setframerate(44100)  # 44.1 kHz
         wav_file.writeframes(audio)
 
-def speak(text, voice="Doctor G"):
-    # print(voices())
-    set_api_key(ELEVENLABS_API_KEY)
+def speak(text, voice="Doctor G") -> None:
+
     audio = generate(text=text, voice=voice)
     play_audio(audio)
 
@@ -37,7 +35,6 @@ def main():
     text = "Hello world!"
     filename = "./assets/output.wav"
     voice = "Doctor G"
-    set_api_key(ELEVENLABS_API_KEY)
 
     # Example 1: Using speak
     print("Example 1: Using speak")
