@@ -1,3 +1,4 @@
+telegram_env
 .env
 venv/
 *__pycache__
