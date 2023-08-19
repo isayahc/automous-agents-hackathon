@@ -18,8 +18,8 @@ def save_as_wav(audio, filename):
         wav_file.setframerate(44100)  # 44.1 kHz
         wav_file.writeframes(audio)
 
-def speak(text, voice="Doctor G") -> None:
-
+def speak(text:str, voice:str="Doctor G") -> None:
+    
     audio = generate(text=text, voice=voice)
     play_audio(audio)
 
