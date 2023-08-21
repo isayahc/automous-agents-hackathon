@@ -2,3 +2,4 @@ telegram_env
 .env
 venv/
 *__pycache__
+testing.ipynb
